@@ -20,7 +20,6 @@ import com.cap.service.LoginService;
 @RestController
 @RequestMapping("/bgv")
 @CrossOrigin("http://localhost:4200")
-
 public class BgvController {
 	@Autowired
 	LoginService loginservice;
@@ -33,7 +32,6 @@ public class BgvController {
 			ResponseEntity<LoginDto> response=new ResponseEntity<LoginDto>(loginobj,HttpStatus.OK);
 			return response;
 		}
-
 	@GetMapping(value="/getdocumentbyid/{enter-id}")
 	public ResponseEntity<EmployeeDocumentDto>getById(@PathVariable("enter-id")  int id)
 	{
